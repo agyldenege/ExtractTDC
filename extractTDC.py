@@ -1,8 +1,10 @@
 import xml.etree.ElementTree as ET
 import os
 import csv
+import itertools
+
 #Set working Directory
-path = './Documents/My Tableau Repository (Beta)/Datasources'
+path = '/Users/arthurg/Documents/My Tableau Repository (Beta)/Datasources'
 os.chdir(path)
 
 
@@ -72,7 +74,6 @@ myCustomizations = map(getCustomizationsFromTDC, myTDC)
 cleanCustomizations =  list(itertools.chain.from_iterable(myCustomizations))
 
 #Write out File Results
-writeResults(mycsv.csv)
-
+writeResults("mycsv.csv")
 
     
